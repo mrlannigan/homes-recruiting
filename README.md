@@ -10,7 +10,17 @@ Submit to this repository as a pull request an application that meets the follow
 * Use Node.js for the back-end web server
 * Use Hapi.js as the web-server framework within Node.js
 * Use Angular.JS as the front-end framework
+* Use the [Public Beta Access Key](https://github.com/Giphy/GiphyAPI#access-and-api-keys)
 * Can be run on any machine with Node.js and NPM
 * Must allow the bound port to be configured via an environment variable named `PORT`
 * Use the web-server to return gif urls from giphy based on the user defined search term
 * Use the web-server to return the angular application
+* Any additional modules/libraries may be used.
+* Default the search term to be `pugs` :)
+* BONUS: Use promises wherever it makes sense
+
+Reference: 
+* [Giphy API](https://github.com/Giphy/GiphyAPI#overview)
+* [Hapi.js](http://hapijs.com/)
+* [Angular.js](https://angularjs.org/)
+* [Bluebird Promise Library](https://github.com/petkaantonov/bluebird)
