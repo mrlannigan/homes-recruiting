@@ -15,9 +15,9 @@ Submit to this repository as a pull request an application that meets the follow
 * Must allow the bound port to be configured via an environment variable named `PORT`
 * Use the web-server to return gif urls from giphy based on the user defined search term
 * Use the web-server to return the angular application
-* Any additional modules/libraries may be used.
+* Any additional modules/libraries may be used
 * Default the search term to be `pugs` :)
-* BONUS: Use promises wherever it makes sense
+* Use promises
 
 Reference: 
 * [Giphy API](https://github.com/Giphy/GiphyAPI#overview)
