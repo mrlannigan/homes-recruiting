@@ -1,18 +1,5 @@
 (function() {
 	var app = angular.module('searchApp', [])
-	/*
-	app.results = {};
-	
-	app.getResults = function() { return(app.results); };
-	app.setResults = function(v) {app.results = v; };
-	
-	app.service("imageResults", function() {
-		var results = {};
-		
-		
-		this.setResults = function(v) {results = v; };
-		return results;
-	});*/
 	
 	app.controller('searchController', ['$scope', '$http', function($scope, $http) {
 		
