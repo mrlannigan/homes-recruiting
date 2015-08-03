@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="searchApp">
+	<head>
+		<title>Recruiting Project - Adam Webster</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="search.js"></script>
+		
+		<style>
+			.primary-wrap {float: left; width: 100%;}
+			.error-wrap {font-weight: 700;}
+			.thumbnail-wrap {float: left; width: 69%; max-width: 1030px;}
+			.main-img-wrap {float: left; width: 30%; padding-left: 1%; text-align: center;}
+			.ctrl-wrap {padding-bottom: 10px;}
+			.ctrl-wrap button {margin: 0 10px; height: 30px; width: 100px;}
+			ul.img-thumbnails {padding: 0; margin: 0; list-style-type: none;}
+			li.thumbnail {float: left;}
+			li.thumbnail div {height: 100px; width: 200px; margin: 3px; cursor: pointer;}
+			li.thumbnail div:hover {margin: 2px;border: solid 1px #f7841b;}
+		</style>
+	</head>
+	<body ng-controller="searchController as search">
+		<form ng-submit="doSearch()" role="form">
+			<label>Giphy Search Term(s):</label>
+			<input type="text" ng-model="searchTerms" placeholder="Enter your search term(s)" required>
+			<button type="submit">Search</button>
+		</form>
+		<hr>
+		
+		<div class="error-wrap" ng-show="searchError">{{searchError}}</div>
+		<div class="primary-wrap" ng-show="searchResults.images.length">
+			<div class="thumbnail-wrap">
+				<ul class="img-thumbnails clearfix">
+					<li class="thumbnail" ng-repeat="images in searchResults.images">
+						<div ng-style="{'background-image':'url({{images.thumb}})', 'background-size' : 'cover'}" ng-click="setCurrentImg($index)"></div>
+						<!--- <div><img ng-src="{{images.thumb}}" ng-click="setCurrentImg($index)" /></div> --->
+					</li>
+				</ul>
+			</div>
+			<div class="main-img-wrap">
+				<div class="ctrl-wrap">
+					<button type="button" ng-click="goToPrevious()">&lt;&lt; Previous</button>
+					<button type="button" ng-click="goToNext()">Next &gt;&gt;</button>
+				</div>
+				<div>
+					<img ng-src="{{primaryImage.url}}" />
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
